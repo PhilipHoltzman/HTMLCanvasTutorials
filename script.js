@@ -47,9 +47,9 @@ class Particle {
         this.y += this.speedY;
     }
     draw(){
-        ctx.fillStyle = 'teal';
+        ctx.fillStyle = '#9bc4bc';
         ctx.beginPath();
-        ctx.arc(this.x,this.y, 50, 0, Math.PI *2);
+        ctx.arc(this.x,this.y, this.size, 0, Math.PI *2);
         ctx.fill();
     }
 }
@@ -62,12 +62,12 @@ function init(){ // create an array of 100 particles
 
 function handleParticles(){
     for (let i = 0; i < particlesArray.length; i++){
-        particlesArray[i].update;
-        particlesArray[i].draw;
+        particlesArray[i].update();
+        particlesArray[i].draw();
     }
 }
 
-init():
+init();
 
 
 function animate(){
